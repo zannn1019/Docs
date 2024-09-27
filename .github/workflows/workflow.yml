@@ -32,8 +32,11 @@ jobs:
       - name: Build Docusaurus site
         run: npm run build
 
+
       - name: Deploy to GitHub Pages
         env:
-          GIT_USER: ${{ github.actor }} # Set GIT_USER to the GitHub Actions actor
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
-        run: npm run deploy
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+        run: |
+          # Set the repository URL to use the token
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}:x-oauth-basic@github.com/${{ github.repository }}.git
+          npm run deploy
