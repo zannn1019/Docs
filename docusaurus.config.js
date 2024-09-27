@@ -13,16 +13,11 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://zannn1019.github.io/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://zannn1019.github.io',
   baseUrl: '/docs-web/',
   trailingSlash: false,
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'zannn1019', // Usually your GitHub org/user name.
-  projectName: 'docs-web', // Usually your repo name.
+  organizationName: 'zannn1019',
+  projectName: 'docs-web',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
